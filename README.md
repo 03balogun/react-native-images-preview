@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
 ## Properties
 
 | Props                 | Default |          Type           | Description                                                                                          |
-| :-------------------- | :-----: | :---------------------: | :--------------------------------------------------------------------------------------------------- |
+|:----------------------| :-----: | :---------------------: |:-----------------------------------------------------------------------------------------------------|
 | **imageSource**       |    -    |   ImageSourcePropType   | Source of image                                                                                      |
 | **imageStyle**        |    -    | `StyleProp<ImageStyle>` | Styling of image                                                                                     |
 | imageProps            |    -    |       ImageProps        | Provide <a href="https://reactnative.dev/docs/image#props"> image props </a>                         |
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
 | doubleTapZoomEnabled  |  true   |         boolean         | Enable/Disable double tap to zoom                                                                    |
 | pinchZoomEnabled      |  true   |         boolean         | Enable/Disable pinch to zoom                                                                         |
 | renderHeader          |    -    |        function         | Call back function to render custom header and provide `close()` in argument                         |
+| renderFooter          |    -    |        function         | Call back function to render custom footer and provide `close()` in argument                         |
 | renderImageLoader     |    -    |        function         | Call back function to render custom image loader                                                     |
 | errorImageSource      |    -    |   ImageSourcePropType   | Source of error image                                                                                |
 | imageLoaderProps      |    -    | ActivityIndicatorProps  | Provide <a href="https://reactnative.dev/docs/activityindicator#props"> ActivityIndicator props </a> |
