@@ -15,7 +15,7 @@ export type ModalConfigType = {
   visible: boolean;
 };
 
-export type HeaderOpacityAnimationType = {
+export type SectionOpacityAnimationType = {
   opacity: number;
 };
 
@@ -28,6 +28,7 @@ export type ImagePreviewProps = {
   swipeDownCloseEnabled?: boolean;
   errorImageSource?: ImageSourcePropType;
   renderHeader?: (close: () => void) => React.ReactElement;
+  renderFooter?: (close: () => void) => React.ReactElement;
   imageLoaderProps?: ActivityIndicatorProps;
 } & Pick<ImageLoaderProps, 'renderImageLoader'>;
 
@@ -39,9 +40,12 @@ export type ImageModalProps = Omit<
   modalConfig: ModalConfigType;
 };
 
-export type HeaderProps = Pick<ImagePreviewProps, 'renderHeader'> & {
+export type SectionProps = Pick<
+  ImagePreviewProps,
+  'renderHeader' | 'renderFooter'
+> & {
   onPressClose: () => void;
-  headerOpacityAnimation: HeaderOpacityAnimationType;
+  sectionOpacityAnimation: SectionOpacityAnimationType;
 };
 
 export type ErrorImageProps = Required<

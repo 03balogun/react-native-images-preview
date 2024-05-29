@@ -229,7 +229,7 @@ const useImageModal = ({
   /**
    * Use to animate the header opacity
    */
-  const headerOpacityAnimation = useAnimatedStyle(() => ({
+  const sectionOpacityAnimation = useAnimatedStyle(() => ({
     opacity: interpolate(colorOffset.value, [0, 1], [0, 1]),
   }));
 
@@ -241,7 +241,7 @@ const useImageModal = ({
     imageAnimatedStyle,
     modalAnimatedStyle,
     animatedImageStyle,
-    headerOpacityAnimation,
+    sectionOpacityAnimation,
     panGestureEvent,
     pinchGestureEvent,
     doubleTapEvent,

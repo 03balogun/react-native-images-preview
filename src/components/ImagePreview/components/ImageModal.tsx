@@ -10,11 +10,13 @@ import { useImageModal } from '../hooks';
 import type { ImageModalProps } from '../Types';
 import Header from './Header';
 import { ImageModalStyle } from './styles';
+import Footer from './Footer';
 
 const ImageModal = ({
   setModalConfig,
   modalConfig,
   renderHeader,
+  renderFooter,
   imageSource,
   doubleTapZoomEnabled,
   pinchZoomEnabled,
@@ -34,7 +36,7 @@ const ImageModal = ({
     animatedImageStyle,
     loading,
     setLoading,
-    headerOpacityAnimation,
+    sectionOpacityAnimation,
     doubleTapEvent,
     panGestureEvent,
     pinchGestureEvent,
@@ -57,7 +59,7 @@ const ImageModal = ({
           <Animated.View style={[styles.modalContainer, modalAnimatedStyle]}>
             <SafeAreaView style={styles.modalContainer}>
               <Header
-                {...{ renderHeader, onPressClose, headerOpacityAnimation }}
+                {...{ renderHeader, onPressClose, sectionOpacityAnimation }}
               />
               {loading && (
                 <ActivityIndicator style={styles.activityIndicatorStyle} />
@@ -77,6 +79,9 @@ const ImageModal = ({
                 onLoadEnd={() => {
                   setLoading(false);
                 }}
+              />
+              <Footer
+                {...{ renderFooter, onPressClose, sectionOpacityAnimation }}
               />
             </SafeAreaView>
           </Animated.View>

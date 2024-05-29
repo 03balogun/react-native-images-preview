@@ -1,5 +1,5 @@
 {
-  "name": "react-native-images-preview",
+  "name": "@03balogun/react-native-images-preview",
   "version": "0.0.1",
   "description": "A React Native animated custom images preview component.",
   "main": "lib/index",
